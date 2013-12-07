@@ -5,7 +5,7 @@
 
 #include "cocoa.hpp"
 
-int main( int argc, const char **argv )
+int main()
 {
     std::string key = "abcdefghijklmnopqrstuvwxyz1234567890";
 
