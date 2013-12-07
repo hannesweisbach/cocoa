@@ -76,13 +76,13 @@ namespace cocoa
         { h[0] = A, h[1] = B, h[2] = C, h[3] = D, h[4] = E; }
 
         static
-        const bool is_little_endian() {
+        bool is_little_endian() {
             const long endian = 1;
             return ((char*)&endian)[0] > 0;
         }
 
         static
-        const bool is_big_endian() {
+        bool is_big_endian() {
             return !is_little_endian();
         }
 
@@ -95,27 +95,27 @@ namespace cocoa
             return h[i];
         }
 
-        inline const bool operator ==( const hash &t ) const
+        inline bool operator ==( const hash &t ) const
         {
             return h == t.h;
         }
 
-        inline const bool operator !=( const hash &t ) const
+        inline bool operator !=( const hash &t ) const
         {
             return h != t.h;
         }
 
-        inline const bool operator<( const hash &t ) const
+        inline bool operator<( const hash &t ) const
         {
             return h < t.h;
         }
 
-        inline const bool operator ==( const std::string &t ) const
+        inline bool operator ==( const std::string &t ) const
         {
             return str() == t;
         }
 
-        inline const bool operator<( const std::string &t ) const
+        inline bool operator<( const std::string &t ) const
         {
             return str() < t;
         }
